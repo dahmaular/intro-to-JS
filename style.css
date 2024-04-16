@@ -1,0 +1,18 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    background-color: #1E0342;
+}
+
+h1 {
+    background-color: rgba(225, 225, 225, 0.3);
+    text-align: center;
+    color: #F6F5F2;
+    padding: 0.5rem 0;
+    font-weight: 300;
+}
