@@ -341,5 +341,172 @@ let calcTip = (percentage , cost ) => {
 
 let result3 = calcTip( totalCost)
 let result4 = calcTip( 1000)
-console.log(result3)
-console.log(result4)
+// console.log(result3)
+// console.log(result4)
+
+let firstName = 'John'
+let lastName = 'Doe'
+let age = 15
+let isMarried = false
+
+// object
+
+const student1 = {
+    firstName: 'John',   //key/property : value 
+    lastName: 'Doe',
+    age: 15,
+    isMarried: false
+}
+
+// console.log('stuent:', student1)
+
+// //accessing object value with property name using the dot notation
+
+// let fName = student1.firstName
+// console.log('first name:', fName)
+
+// let lName = student1.lastName
+// console.log('last name:', lName)
+
+// let studentAge = student1.age
+// console.log('age:', studentAge)
+
+// overide object properties usinf the dot notation
+
+student1.age = 25;
+
+// console.log(student1)
+
+
+// to-do
+
+let car = {
+    doors: 2,
+    name: 'lexus',
+    year: 2015,
+    tyres: 4,
+}
+
+
+// add two new properties to the car object
+// set wipers = 2
+// set trunk = 1
+
+car.wipers = 2
+car.trunk = 1
+
+// console.log('car after adding properies:', car)
+
+// nested objects
+
+const family = {
+    familyName: 'Doe',
+
+    familyAddress: '23, ojodu',
+
+    familyChildren: {
+
+        firstChild: 'Jack',
+
+        secondChild: 'Joe'
+    }
+}
+
+// console.log(family)
+
+// family.familyChildren.thirdChild = 'Mike'
+// family.familyChildren.firstChild = 'Bill'
+// console.log(family)
+
+
+const dog = {
+    name: 'Bingo',
+    tail: 1,
+    limbs: 4,
+    bark: function() {            
+        return 'woof'
+    }
+}
+
+//A function that's a property/value of an object
+// is called a 'method'.
+
+// console.log('dog:' , dog)
+
+// let dogBark = dog.bark();
+// console.log(dogBark)
+
+// delete dog.name;
+// console.log(dog)
+
+// create a function that accepts 2 arguments and returns them in an object
+
+
+function createUser(fName, lName) {
+    return {
+        fName: fName,
+        lName: lName
+    }
+}
+
+let user = createUser('Jon', 'Doe')
+// console.log('user' ,user)
+
+
+// create a fn that accepts and object and modify it
+
+
+let ourObj = {}
+
+function modifyObject(obj) {
+    // add properties into the empty object
+    obj.firstName = 'Jane'
+    obj.lastName = 'Doe'
+    return obj;
+}
+
+let myResult = modifyObject(ourObj)
+// console.log('my result:' , myResult)
+
+
+// fake database
+
+// let database = {
+//     username: '@dave',
+//     password: 'dave12'
+// }
+
+
+// live feed
+
+// let feed = {
+//     news1: "The lagos state government is set to demolish Oshodi bridge",
+//     news2: 'Happ birthday to me',
+// }
+
+// let verifyUser = function(userName, password) {
+//     if(userName === database.username && password === database.password ) {
+//         console.log(feed);
+//     }else {
+//         console.log('wrong username or password')
+//     }
+// }
+
+// let usernameFromPrompt = prompt('Enter your username')
+// let passwordPrompt = prompt('Enter your password')
+
+// verifyUser(usernameFromPrompt, passwordPrompt)
+
+let database = {}
+
+let usernameFromUser = prompt('Enter your username')
+let passwordFromUser = prompt('Enter your password')
+
+let createNewUser = (username, password) => {
+    database.userName = username
+    database.password = password
+}
+
+createNewUser(usernameFromUser, passwordFromUser)
+
+console.log('database ater user updates info:' ,database)
